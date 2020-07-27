@@ -1,1 +1,1 @@
-# api node, utilizando express e com conexão direta com o mongoDb,utilizando Atlas e o Mongoose.
+# api node, utilizando express, Atlas e o Mongoose.
