@@ -1,1 +1,1 @@
-# api_node
+# api node, utilizando express, Atlas e o Mongoose.
