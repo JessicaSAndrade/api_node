@@ -53,11 +53,18 @@ process.on('SIGINT', () => {
     });
 });
 
-// Carregamento de rotas, chamando do arquivo de rotas index-routes.js
-const indexRoutes = require('./routes/index-routes');
+// Chamada do modulo de banco de dados
+const Mentions = require('./models/mentions');
 
+// Carregamento de rotas padrão, chamando do arquivo de rotas index-routes.js
+const indexRoutes = require('./routes/index-routes');
 // fixamento da porta inicial como /
 app.use('/', indexRoutes);
+
+// Rotas de menções
+const mentionsRoutes = require('./routes/mentions-routes');
+// Chamada de rotas de menções
+app.use('/mentions', mentionsRoutes);
 
 
 module.exports = app;
